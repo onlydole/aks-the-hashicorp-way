@@ -1,0 +1,18 @@
+global:
+  name: consul
+  enabled: true
+  gossipEncryption:
+    secretName: consul-gossip-encryption-key
+    secretKey: key
+  tls:
+    enabled: true
+    enableAutoEncrypt: true
+    verify: true
+  acls:
+    manageSystemACLs: true
+
+connectInject:
+  enabled: true
+
+controller:
+  enabled: true

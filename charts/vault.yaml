@@ -1,0 +1,14 @@
+injector:
+  enabled: true
+  metrics:
+    enabled: true
+server:
+  image:
+    repository: "vault"
+    tag: "1.6.1"
+  auditStorage:
+    enabled: true
+  ha:
+    enabled: true
+    raft:
+      enabled: True

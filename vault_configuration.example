@@ -1,0 +1,21 @@
+ui = true
+listener "tcp" {
+  tls_disable = 1
+  address = "[::]:8200"
+  cluster_address = "[::]:8201"
+}
+
+storage "raft" {
+  path = "/vault/data"
+}
+
+seal "azurekeyvault" {
+  tenant_id       = ""
+  client_id       = ""
+  client_secret   = ""
+  vault_name      = "vault-on-aks"
+  key_name        = "vault-aks"
+  subscription_id = ""
+}
+
+service_registration "kubernetes" {}

@@ -21,6 +21,3 @@ override.tf.json
 # Packer variables
 *.pkrvars.hcl
 *auto.pkrvars.hcl
-
-# Configuration
-*.example
